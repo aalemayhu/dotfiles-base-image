@@ -12,4 +12,4 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
       echo $MAIL_NAME | debconf-set-selections && \
       echo $MAIL_TYPE | debconf-set-selections && \
       apt-get clean && \
-      rm -rf /var/lib/apt/lists/* /var/tmp/*
+      rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
