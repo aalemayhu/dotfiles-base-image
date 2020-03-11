@@ -11,5 +11,6 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
       apt-get install -y sudo git vim make ruby curl locales && \
       echo $MAIL_NAME | debconf-set-selections && \
       echo $MAIL_TYPE | debconf-set-selections && \
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && \
       apt-get clean && \
       rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
