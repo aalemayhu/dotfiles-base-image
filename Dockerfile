@@ -8,7 +8,7 @@ LABEL maintainer Alexander Alemayhu
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
       apt-get update && \
-      apt-get install -y sudo git vim make ruby curl locales nodejs && \
+      apt-get install -y sudo git vim make ruby curl locales nodejs npm && \
       echo $MAIL_NAME | debconf-set-selections && \
       echo $MAIL_TYPE | debconf-set-selections && \
       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && \
